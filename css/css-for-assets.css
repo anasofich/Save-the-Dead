@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    html {
+        background-color: #E08634;
+        font-size: 100%
+    }
+
+    body {
+        background-color: #6E015E;
+        display: grid;
+        grid-template-areas:
+            "hd hd hd hd"
+            "ma ma ma ma"
+            "fo fo fo fo";
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 0fr;
+        margin: 2em;
+        color: white;
+    }
+
+    
+    header {
+        grid-area: hd;
+        font-family: 'Lobster', cursive;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+   header ul {
+        padding: 0em;
+        margin: 0em;
+        color: black;
+    }
+
+    header img {
+        max-width: 100%;
+        padding: 1em;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 5em;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    h1 li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    li a :link {
+        color: black;
+        text-decoration: none;
+        background-color: #E08634
+    }
+
+    li a:visited {
+        color: black;
+        text-decoration: none;
+        background-color: #E08634
+    }
+
+    li a:hover {
+        color: white;
+        text-decoration: none;
+        background-color: #E08634;
+    }
+
+    li a:active {
+        color: black;
+        background-color: #E08634;
+        text-decoration: none
+    }
+
+    #navigator ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.3em;
+    }
+
+    main {
+        grid-area: ma;
+        font-family: 'Kumbh Sans', sans-serif;
+        display: grid;
+        grid-template-areas:
+            "s1"
+            "s2"
+            "s3"
+            "s4";
+        grid-template-columns: 1fr;
+        grid-column-gap: 50px;
+        padding-left: 2em;
+        padding-right: 2em;
+        text-align: left;
+        font-size: 2em;
+    }
+
+    h2 {
+        font-family: 'Abril Fatface', cursive;
+        text-align: center;
+        font-size: 2em;
+        background-color: #E08634;
+        line-height: 1.5em;
+    }
+
+
+    footer {
+        grid-area: fo;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-align: center;
+        font-size: 0.8em;
+        padding: 1em;
+    }
+}

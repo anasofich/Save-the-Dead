@@ -1,0 +1,1351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    grid-template-areas:
+        "hd"
+        "ma"
+        "fo";
+    background-color: #8d3b8d;
+}
+
+header {
+    grid-area: hd;
+    background-color: orange;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 2vw;
+}
+
+li {
+    padding: 3vw;
+}
+
+nav a {
+    text-decoration: none
+}
+
+li a:link {
+    color: black;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: black;
+    text-decoration: none
+}
+
+li a:hover {
+    color: mediumvioletred;
+    text-decoration: none
+}
+
+li a:active {
+    color: green;
+    text-decoration: none
+}
+
+main {
+    grid-area: ma;
+    display: grid;
+    grid-template-areas:
+        "logo logo"
+        "game info";
+    grid-column-gap: 10vw;
+    grid-template-columns: 75% 1fr;
+    margin: 2vw;
+}
+
+#logo {
+    grid-area: logo;
+    margin-left: 18vw;
+    margin-right: 2vw;
+}
+
+#logo img {
+    max-width: 80%
+}
+
+#screen {
+    position: relative;
+    grid-area: game;
+    width: 75vw;
+    height: 45vw;
+    border: 4px black solid;
+    overflow: hidden;
+}
+
+#title_screen {
+    width: 100%;
+    height: 100%;
+}
+
+#title_screen_background {
+    position: absolute;
+    background-image: url(Images/Start-screen.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vw;
+    height: 45vw;
+    right: 0vw;
+}
+
+#load_game_container {
+    position: absolute;
+    bottom: 5vw;
+    right: 12vw;
+}
+
+#load_game_sprite {
+    width: 14vw;
+    height:14vw;
+    background-size: 14vw;
+    background-image: url(Images/load-game.svg);
+    background-repeat: no-repeat;
+}
+
+.blink {
+    animation-name: blink;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+     0% {
+        transform: scale(1); 
+    }
+
+    100% {
+        transform: scale(1.1); 
+    }
+}
+
+#happyfl-ss_container {
+    position: absolute;
+    left: 26vw;
+    bottom: 1vw;
+}
+
+#happyfl-ss_sprite {
+    background-image: url(Images/happy-left-f-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    width: 10vw;
+    height: 22vw;
+}
+
+#happymr-ss_container {
+    position: absolute;
+    left: 1vw;
+    bottom: 1vw;
+}
+
+#happymr-ss_sprite {
+    background-image: url(Images/happy-right-m-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 10vw;
+    height: 22vw;
+}
+
+#browndog-ss_container {
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+}
+
+#browndog-ss_sprite {
+    background-image: url(Images/brown-dog-body-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 7vw;
+    width: 8vw;
+    height: 10vw;
+}
+
+#browndogtail-ss_container {
+    position: absolute;
+    right: 1.2vw;
+    bottom: 1.9vw;
+}
+
+#browndogtail-ss_sprite {
+    background-image: url(Images/brown-dog-tail-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 7vw;
+}
+
+.tail_animation {
+    animation-name: wiggle;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes wiggle {
+     0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(10deg)
+    }
+}
+
+#xoloitzcuincle-ss_container {
+    position: absolute;
+    right: 27vw;
+    bottom: 1vw;
+}
+
+#xoloitzcuincle-ss_sprite {
+    background-image: url(Images/xoloitzcuincle-body-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 8vw;
+    width: 8vw;
+    height: 10vw;
+}
+
+#xoloitzcuincletail-ss_container {
+  position: absolute;
+    right: 33.4vw;
+    bottom: 0.9vw;
+}
+
+#xoloitzcuincletail-ss_sprite {
+    background-image: url(Images/xoloitzcuincle-tail-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 7vw;
+}
+
+#instructions {
+    position: absolute;
+    background-image: url(Images/Game-background-screen.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "bg1";
+}
+
+
+#bg1 {
+    grid-area: bg1;
+    display: grid;
+    background-color: #ee6b11;
+    width: 60vw;
+    height: 43vw;
+    border-radius: 3vw;
+    margin-left: 7.5vw;
+    margin-top: 1vw;
+}
+
+#bg2 {
+    background-color: #62002d;
+    width: 56vw;
+    height: 40vw;
+    border-radius: 3vw;
+    margin-left: 2vw;
+    margin-top: 1.4vw;
+    display: grid;
+    grid-template-areas:
+        "s1 s1"
+        "s2 s3"
+        "s4 s5"
+        "s6 s7"
+        "s8 s9"
+        "s10 s10";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0.1vw;
+}
+
+
+#s1 {
+    grid-area: s1;
+    margin-left: 15vw;
+    margin-top: 1vw;
+}
+
+#s1 img {
+    max-width: 65%
+}
+
+#s2 {
+    grid-area: s2;
+    padding-left: 2vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#s3 {
+    grid-area: s3;
+    padding-right: 2vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#s4 {
+    grid-area: s4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#s4 img {
+    max-width: 20%;
+}
+
+#s5 {
+    grid-area: s5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#s5 img {
+    max-width: 20%;
+}
+
+#s6 {
+    grid-area: s6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#s6 img {
+    max-width: 13%;
+}
+
+#s7 {
+    grid-area: s7;
+    padding-right: 2vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#s8 {
+    grid-area: s8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7vw;
+    text-align: center;
+    margin-left: 3vw;
+}
+
+#s9 {
+    grid-area: s9;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 10vw;
+    margin-bottom: 3vw;
+}
+
+#s9 img {
+    max-width: 30%;
+}
+
+#startgame_container {
+    position: absolute;
+    right: 11vw;
+    bottom: 3vw;
+}
+
+#startgame_sprite {
+    background-image: url(Images/start-game-button.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 9vw;
+}
+
+#home-ins_container {
+    position: absolute;
+    left: 12vw;
+    top: 5vw;
+}
+
+#home-ins_sprite {
+    background-image: url(Images/home-ws.svg);
+    background-repeat: no-repeat;
+    background-size: 4vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+
+#game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#game_background {
+    position: absolute;
+    background-image: url(Images/Game-background-screen.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75vw;
+    height: 45vw;
+    border: 4px black solid;
+}
+
+#yellowpaper1_container {
+    position: absolute;
+}
+
+.pos1 {
+    left: 31vw;
+    top: 30vw
+}
+
+#yellowpaper1_sprite {
+    width: 10vw;
+    height: 7vw;
+    background-size: 9vw;
+    background-image: url(Images/Cut-paper-yellow.svg);
+    background-repeat: no-repeat;
+}
+
+#pandemuerto2_container {
+    position: absolute;
+}
+
+.pos2 {
+    left: 13vw;
+    top: 25vw
+}
+
+#pandemuerto2_sprite {
+    background-image: url(Images/pan-de-muerto.svg);
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 7vw;
+    background-size: 9vw;
+}
+
+#femalebaditem3_container {
+    position: absolute;
+}
+
+.pos3 {
+    left: 55vw;
+    top: 15vw;
+}
+
+#femalebaditem3_sprite {
+    background-image: url(Images/female-bad-item.svg);
+    ;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 12vw;
+    background-size: 9vw;
+}
+
+#browndog4_container {
+    position: absolute
+}
+
+.pos4 {
+    right: 5vw;
+    bottom: -5vw;
+}
+
+#browndog4_sprite {
+    background-image: url(Images/brown-dog.svg);
+    background-repeat: no-repeat;
+    width: 9vw;
+    height: 12vw;
+    background-size: 9vw;
+}
+
+#candle17_container {
+    position: absolute
+}
+
+.pos5 {
+    left: 26vw;
+    top: 14vw;
+}
+
+/*changed 5 with 17*/
+
+#candle17_sprite {
+    background-image: url(Images/candle.svg);
+    background-repeat: no-repeat;
+    background-size: 5vw;
+    width: 5.5vw;
+    height: 9vw;
+}
+
+#xoloitzcuincle18_container {
+    position: absolute;
+    pointer-events: fill;
+}
+
+#xoloitzcuincle18_sprite {
+    background-image: url(Images/xoloitzcuincle.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 12vw;
+}
+
+#greenpaper19_container {
+    position: absolute;
+}
+
+#greenpaper19_sprite {
+    background-image: url(Images/Cut-paper-green.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 10vw;
+    height: 7vw;
+}
+
+#flowervase20_container {
+    position: absolute;
+}
+
+#flowervase20_sprite {
+    background-image: url(Images/flower-vase.svg);
+    background-repeat: no-repeat;
+    background-size: 7vw;
+    width: 7.5vw;
+    height: 9.5vw;
+}
+
+#malebaditem21_container {
+    position: absolute;
+}
+
+#malebaditem21_sprite {
+    background-image: url(Images/male-bad-item.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 10vw;
+    height: 12vw;
+}
+
+#frame22_container {
+    position: absolute;
+}
+
+#frame22_sprite {
+    background-image: url(Images/frame.svg);
+    background-repeat: no-repeat;
+    background-size: 7vw;
+    width: 7vw;
+    height: 9.5vw;
+}
+
+#foreground_container {
+    position: absolute;
+    pointer-events: none;
+}
+
+.posfg {
+    right: 0vw;
+    top: 0.5vw;
+}
+
+#foreground_sprite {
+    background-image: url(Images/Game-foreground-screen.svg);
+    width: 75vw;
+    height: 45vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#happyfl5_container {
+    position: absolute;
+}
+
+.pos17 {
+    left: 22vw;
+    bottom: 2vw
+}
+
+/*changed 5 with 17*/
+
+#happyfl5_sprite {
+    width: 9vw;
+    height: 17vw;
+}
+
+.happyf {
+    background-image: url(Images/happy-left-f-gs.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 17vw;
+}
+
+.surprisedf {
+    background-image: url(Images/surprised-f-gs.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 17vw;
+}
+
+#happymr6_container {
+    position: absolute;
+}
+
+.pos6 {
+    left: 4vw;
+    bottom: 2vw;
+}
+
+#happymr6_sprite {
+    width: 9vw;
+    height: 17vw;
+}
+
+.happym {
+    background-image: url(Images/happy-right-m-gs.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 17vw;
+}
+
+.surprisedm {
+    background-image: url(Images/surprised-m-gs.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 17vw;
+}
+
+#timebottom7_container {
+    position: absolute
+}
+
+.pos7 {
+    left: 1vw;
+    top: 0.4vw;
+}
+
+#timebottom7_sprite {
+    background-image: url(Images/time-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 14vw;
+    width: 15vw;
+    height: 4vw;
+}
+
+#timemiddle8_container {
+    position: absolute
+}
+
+.pos8 {
+    left: 1vw;
+    top: 0.4vw;
+}
+
+#timemiddle8_sprite {
+    background-image: url(Images/time-middle.svg);
+    background-repeat: no-repeat;
+    background-size: 14vw;
+    width: 15vw;
+    height: 4vw;
+}
+
+#timetop9_container {
+    position: absolute;
+}
+
+.pos9 {
+    left: 1vw;
+    top: 0.4vw;
+}
+
+#timetop9_sprite {
+    background-image: url(Images/time-top.svg);
+    background-repeat: no-repeat;
+    background-size: 14vw;
+    width: 14vw;
+    height: 4vw;
+}
+
+#points10_container {
+    position: absolute;
+}
+
+.pos10 {
+    left: 30vw;
+    top: 1vw;
+}
+
+#points10_sprite {
+    background-image: url(Images/point-indicator.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 3vw;
+}
+
+#pointsno11_container {
+    position: absolute;
+}
+
+.pos11 {
+    left: 40vw;
+    top: 0.5vw;
+}
+
+#pointsno11_sprite {
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3vw
+}
+
+#lives12_container {
+    top: 1vw;
+    left: 46vw;
+    width: 30vw;
+    height: 4vw;
+}
+
+.pos12 {
+    right: 1vw;
+    top: 1vw;
+}
+
+#life1_sprite {
+    position: absolute;
+    right: 8vw;
+    top: 1vw;
+}
+
+#life2_sprite {
+    position: absolute;
+    right: 4vw;
+    top: 1vw;
+}
+
+#life3_sprite {
+    position: absolute;
+    right: 0vw;
+    top: 1vw;
+}
+
+.life {
+    background-image: url(Images/life.svg);
+    background-repeat: no-repeat;
+    background-size: 4vw;
+    width: 5vw;
+    height: 4vw;
+}
+
+.lostlife {
+    background-image: url(Images/lost-life.svg);
+    background-repeat: no-repeat;
+    background-size: 4vw;
+    width: 5vw;
+    height: 4vw;
+}
+
+
+#settings13_container {
+    position: absolute;
+}
+
+.pos13 {
+    left: 1vw;
+    bottom: 10vw;
+}
+
+#settings13_sprite {
+    width: 3vw;
+    height: 3vw;
+}
+
+.pausebutton {
+    background-image: url(Images/settings.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.playbutton {
+    background-image: url(Images/play-button.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+#homes14_container {
+    position: absolute;
+}
+
+.pos14 {
+    left: 1vw;
+    bottom: 7vw;
+}
+
+#homes14_sprite {
+    background-image: url(Images/home-small.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+#music15_container {
+    position: absolute;
+}
+
+.pos15 {
+    left: 1vw;
+    bottom: 4vw;
+}
+
+#music15_sprite {
+    width: 3vw;
+    height: 3vw;
+}
+
+.music {
+    background-image: url(Images/music.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.nomusic {
+    background-image: url(Images/no-music.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+#sound16_container {
+    position: absolute;
+}
+
+.pos16 {
+    left: 0.8vw;
+    bottom: 1vw;
+}
+
+#sound16_sprite {
+    width: 3vw;
+    height: 3vw;
+}
+
+.sound {
+    background-image: url(Images/sound.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw; 
+}
+
+.nosound {
+    background-image: url(Images/no-sound.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+
+.animation1 {
+    animation-name: moveUpChapel;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-delay: 4s;
+}
+
+@keyframes moveUpChapel {
+    from {
+        transform: translate(0vw, 0vw)
+    }
+
+    to {
+        transform: translate(5vw, -10vw)
+    }
+}
+
+.animation2 {
+    animation-name: moveUpTable;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+@keyframes moveUpTable {
+    from {
+        transform: translateX(0vw) translateY(0vw)
+    }
+
+    to {
+        transform: translateX(0vw) translateY(-11.5vw)
+    }
+}
+
+.animation3 {
+    animation-name: moveUpTree;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+@keyframes moveUpTree {
+    from {
+        transform: translate(0vw, 0vw)
+    }
+
+    to {
+        transform: translate(3vw, -13vw)
+    }
+}
+
+.fadeout1 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout2 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout3 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout4 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout17 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout18 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout19 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout20 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout21 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeout22 {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+.timerunning {
+    animation-name: timerunning;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    transform-origin: left;
+    animation-timing-function: linear;
+    margin-left: 0.1vw;
+    overflow: hidden;
+}
+
+@keyframes timerunning {
+    from {
+      transform: scaleX(1)
+    }
+
+    to {
+        transform: scaleX(0)
+    }
+}
+
+.shaking {
+    animation-name: shaking;
+    animation-duration: 0.1s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+}
+
+@keyframes shaking {
+    0% {
+        transform: rotate(-5deg)
+    }
+
+    100% {
+        transform: rotate(5deg)
+    }
+}
+
+#game_over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#gameover_background {
+    position: absolute;
+    background-image: url(Images/Game-over-screen.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75vw;
+    height: 45vw;   
+}
+
+#sadfemale_container {
+    position: absolute;
+    left: 3vw;
+    bottom: 1vw;
+}
+
+#sadfemale_sprite {
+    background-image: url(Images/sad-f.svg);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    width: 10vw;
+    height: 22vw;
+}
+
+#sadmale_container {
+    position: absolute;
+    left: 28vw;
+    bottom: 1vw;
+}
+
+#sadmale_sprite {
+    background-image: url(Images/sad-m.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 10vw;
+    height: 22vw;
+}
+
+#youlost_container {
+    position: absolute;
+    right: 3vw;
+    top: 3vw;
+}
+
+#youlost_sprite {
+    background-image: url(Images/game-over-message.svg);
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    width: 40vw;
+    height: 22vw;
+}
+
+#homebuttongs_container {
+    position: absolute;
+    right: 25vw;
+    top: 14vw;
+}
+
+#homebuttongs_sprite {
+    background-image: url(Images/home-gos.svg);
+    background-repeat: no-repeat;
+    background-size: 6vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#tryagain_container {
+    position: absolute;
+    right: 10vw;
+    top: 14vw;
+}
+
+#tryagain_sprite {
+    background-image: url(Images/try-again.svg);
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    width: 9vw;
+    height: 7vw;
+}
+
+#level_complete {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#levelcomplete_background {
+    position: absolute;
+    background-image: url(Images/Win-screen.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75vw;
+    height: 45vw;   
+}
+
+#smilingfemale_container {
+    position: absolute;
+    left: 31vw;
+    bottom: 1vw;
+}
+
+#smilingfemale_sprite {
+    background-image: url(Images/smiling-f-ws.svg);
+    background-repeat: no-repeat;
+    background-size: 13vw;
+    width: 13vw;
+    height: 19vw;
+}
+
+#smilingmale_container {
+    position: absolute;
+    left: 0vw;
+    bottom: 1vw;
+}
+
+#smilingmale_sprite {
+    background-image: url(Images/smiling-m-ws.svg);
+    background-repeat: no-repeat;
+    background-size: 14vw;
+    width: 14vw;
+    height: 19vw;
+}
+
+.bouncing {
+    animation-name: bouncing;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: rotate(-10deg)
+    }
+
+    100% {
+        transform: rotate(10deg)
+    }
+}
+
+#browndog-ws_container {
+    position: absolute;
+    left: 22vw;
+    bottom: 2vw;
+}
+
+#browndog-ws_sprite {
+    background-image: url(Images/brown-dog-body-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 7vw;
+    width: 8vw;
+    height: 10vw;
+}
+
+#browndogtail-ws_container {
+    position: absolute;
+    left: 27.8vw;
+    bottom: 1.9vw;
+}
+
+#browndogtail-ws_sprite {
+    background-image: url(Images/brown-dog-tail-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 7vw;
+}
+
+#xoloitzcuincle-ws_container {
+    position: absolute;
+    left: 15vw;
+    bottom: 1vw;
+}
+
+#xoloitzcuincle-ws_sprite {
+    background-image: url(Images/xoloitzcuincle-body-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 8vw;
+    width: 8vw;
+    height: 10vw;
+}
+
+#xoloitzcuincletail-ws_container {
+  position: absolute;
+    left: 13.7vw;
+    bottom: 0.9vw;
+}
+
+#xoloitzcuincletail-ws_sprite {
+    background-image: url(Images/xoloitzcuincle-tail-ss.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    width: 3vw;
+    height: 7vw;
+}
+
+#youwin_container {
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+}
+
+#youwin_sprite {
+    background-image: url(Images/level-complete-message.svg);
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    width: 40vw;
+    height: 22vw;
+}
+
+#homebuttonws_container {
+    position: absolute;
+    right: 25vw;
+    top: 13vw;
+}
+
+#homebuttonws_sprite {
+    background-image: url(Images/home-ws.svg);
+    background-repeat: no-repeat;
+    background-size: 6vw;
+    width: 6vw;
+    height: 6vw;
+}
+
+#playagain_container {
+    position: absolute;
+    right: 10vw;
+    top: 12vw;
+}
+
+#playagain_sprite {
+    background-image: url(Images/play-again.svg);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    width: 10vw;
+    height: 9vw;
+}
+
+    
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.stop {
+    animation-play-state: paused;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.restart {
+    animation-play-state: running;
+}
+
+
+aside {
+    grid-area: info;
+    color: white;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+#pinfo {
+    font-size: 1vw;
+}
+
+footer {
+    grid-area: fo;
+    height: 100px;
+    width: 100vw;
+    background-color: greenyellow;
+    bottom: 0;
+}
+
+#soundinfo {
+    text-align: end;
+    font-size: 1vw;
+    margin-right: 2vw;
+}
+

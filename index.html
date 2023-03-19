@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Dead</title>
+    <link rel="stylesheet" href="css-for-game.css">
+</head>
+
+<body>
+    <header>
+        <nav id="globalnav">
+            <ul>
+                <li><a href="index.html">Game</a></li>
+                <li><a href="assets2.html">Assets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="logo">
+            <img src="Images/Title-logo.svg" alt="Title-logo">
+        </section>
+        <section id="screen">
+            <div id="title_screen" class="hidden">
+                <div id="title_screen_background"></div>
+
+                <div id="load_game_container">
+                    <div id="load_game_sprite"></div>
+                </div>
+
+                <div id="happyfl-ss_container">
+                    <div id="happyfl-ss_sprite"></div>
+                </div>
+
+                <div id="happymr-ss_container">
+                    <div id="happymr-ss_sprite"></div>
+                </div>
+
+                <div id="browndog-ss_container">
+                    <div id="browndog-ss_sprite"></div>
+                </div>
+
+                <div id="browndogtail-ss_container">
+                    <div id="browndogtail-ss_sprite"></div>
+                </div>
+
+                <div id="xoloitzcuincle-ss_container">
+                    <div id="xoloitzcuincle-ss_sprite"></div>
+                </div>
+
+                <div id="xoloitzcuincletail-ss_container">
+                    <div id="xoloitzcuincletail-ss_sprite"></div>
+                </div>
+                
+                <audio id="titlescreenMusic" src="audio/title-screen-music.m4a"></audio>
+                
+            </div>
+
+            <div id="instructions" class="hidden">
+
+                <div id="instructions_background"></div>
+                
+                <div id="bg1">
+                
+                    <div id="bg2">
+                    
+                    <div id="s1">
+                        <img src="Images/Title-logo.svg" alt="Title-logo">
+                    </div>
+                        
+                    <div id="s2">
+                      <p>To gain points help the dead have a nice Day of the Dead by choosing the right items for their altars
+                    </p>    
+                    </div>
+                        
+                    <div id="s3">
+                        <p>
+                        Beware! There are dogs around that like to steal things from the altars, don't click on them or you will lose points!
+                        </p>
+                    </div>
+                        
+                    <div id="s4">
+                        
+                     <img src="Images/yellow-paper-ins.svg" alt="yellow-paper">
+                     <img src="Images/pan-de-muerto-ins.svg" alt="pan-de-muerto">
+                    <img src="Images/frame-ins.svg" alt="frame">
+                        
+                    </div>
+                        
+                        
+                    <div id="s5">
+                        
+                    <img src="Images/xoloitzcuincle-ins.svg" alt="xoloitzcuincle">
+                        
+                    <img src="Images/brown-dog-ins.svg" alt="brown-dog">
+                        
+                    </div>
+                        
+                     <div id="s6">
+                        
+                     <img src="Images/calavera-ins.svg" alt="calavera">
+                     <img src="Images/flower-vase-ins.svg" alt="flower-vase">
+                    <img src="Images/candle-ins.svg" alt="candle">
+                        
+                    </div>
+                        
+                        
+                    <div id="s7">
+                    
+                        <p>Also, make sure to not click on the dead and scare them away or you will lose a life</p>
+                        
+                    </div>
+                        
+                        
+                    <div id="s9">
+                        
+                    <img src="Images/male-bad-item-ins.svg" alt="male-bad-item">
+                        
+                    <img src="Images/female-bad-item-ins.svg" alt="female-bad-item">
+                        
+                    </div>
+                        
+                    <div id="s8">
+                        
+                    <p>
+                      Get at least 20 points by the end of the game and you will win! 
+                    </p>
+                        
+                    </div>
+                        
+                    <div id="startgame_container">
+                    <div id="startgame_sprite"></div>
+                    </div>
+                    
+                    <div id="home-ins_container">
+                    <div id="home-ins_sprite"></div>    
+                    </div>
+            
+                    </div>  
+                </div> 
+            </div>
+                
+
+            <div id="game" class="hidden">
+                <div id="game_background"></div>
+
+                <div id="yellowpaper1_container">
+                    <div id="yellowpaper1_sprite"></div>
+                </div>
+
+                <div id="pandemuerto2_container">
+                    <div id="pandemuerto2_sprite"></div>
+                </div>
+
+                <div id="femalebaditem3_container">
+                    <div id="femalebaditem3_sprite"></div>
+                </div>
+
+                <div id="browndog4_container">
+                    <div id="browndog4_sprite"></div>
+                </div>
+
+                <div id="candle17_container">
+                    <div id="candle17_sprite"></div>
+                </div>
+
+                <div id="xoloitzcuincle18_container">
+                    <div id="xoloitzcuincle18_sprite"></div>
+                </div>
+
+                <div id="greenpaper19_container">
+                    <div id="greenpaper19_sprite"></div>
+                </div>
+
+                <div id="flowervase20_container">
+                    <div id="flowervase20_sprite"></div>
+                </div>
+
+                <div id="malebaditem21_container">
+                    <div id="malebaditem21_sprite"></div>
+                </div>
+
+                <div id="frame22_container">
+                    <div id="frame22_sprite"></div>
+                </div>
+
+                <div id="foreground_container">
+                    <div id="foreground_sprite"></div>
+                </div>
+
+                <div id="happyfl5_container">
+                    <div id="happyfl5_sprite"></div>
+                </div>
+
+                <div id="happymr6_container">
+                    <div id="happymr6_sprite"></div>
+                </div>
+
+                <div id="game_ui">
+                    <div id="timebottom7_container">
+                        <div id="timebottom7_sprite"></div>
+                    </div>
+
+                    <div id="timemiddle8_container">
+                        <div id="timemiddle8_sprite"></div>
+                    </div>
+
+                    <div id="timetop9_container">
+                        <div id="timetop9_sprite"></div>
+                    </div>
+
+                    <div id="points10_container">
+                        <div id="points10_sprite"></div>
+                    </div>
+
+                    <div id="pointsno11_container">
+                        <div id="pointsno11_sprite">0</div>
+                    </div>
+
+                    <div id="lives12_container">
+                        <div id="life3_sprite" class="life"></div>
+                        <div id="life2_sprite" class="life"></div>
+                        <div id="life1_sprite" class="life"></div>
+                    </div>
+
+                    <div id="settings13_container">
+                        <div id="settings13_sprite"></div>
+                    </div>
+
+                    <div id="homes14_container">
+                        <div id="homes14_sprite"></div>
+                    </div>
+
+                    <div id="music15_container">
+                        <div id="music15_sprite"></div>
+                    </div>
+
+                    <div id="sound16_container">
+                        <div id="sound16_sprite"></div>
+                    </div>
+                    
+                    <audio id="dogbarkSound" src="audio/dog-bark.mp3"></audio>
+                    
+                    <audio id="lostlifeSound" src="audio/lost-life.mp3"></audio>
+                    
+                    <audio id="gooditemSound" src="audio/good-item.mp3"></audio>
+                    
+                    <audio id="buttonSound" src="audio/button-sound.mp3"></audio>
+
+                </div>
+                
+                <audio id="gameMusic" src="audio/game-music.m4a"></audio>
+
+            </div>
+
+            <div id="game_over" class="hidden">
+
+                <div id="gameover_background"></div>
+
+                <div id="sadfemale_container">
+                    <div id="sadfemale_sprite"></div>
+                </div>
+
+                <div id="sadmale_container">
+                    <div id="sadmale_sprite"></div>
+                </div>
+
+                <div id="youlost_container">
+                    <div id="youlost_sprite"></div>
+                </div>
+
+                <div id="homebuttongs_container">
+                    <div id="homebuttongs_sprite"></div>
+                </div>
+
+                <div id="tryagain_container">
+                    <div id="tryagain_sprite"></div>
+                </div>
+                
+                <audio id="gameoverMusic" src="audio/game-over-music.m4a"></audio>
+                
+            </div>
+
+            <div id="level_complete" class="hidden">
+
+                <div id="levelcomplete_background"></div>
+
+                <div id="smilingfemale_container">
+                    <div id="smilingfemale_sprite"></div>
+                </div>
+
+                <div id="smilingmale_container">
+                    <div id="smilingmale_sprite"></div>
+                </div>
+
+                <div id="browndog-ws_container">
+                    <div id="browndog-ss_sprite"></div>
+                </div>
+
+                <div id="browndogtail-ws_container">
+                    <div id="browndogtail-ss_sprite"></div>
+                </div>
+
+                <div id="xoloitzcuincle-ws_container">
+                    <div id="xoloitzcuincle-ss_sprite"></div>
+                </div>
+
+                <div id="xoloitzcuincletail-ws_container">
+                    <div id="xoloitzcuincletail-ss_sprite"></div>
+                </div>
+
+                <div id="youwin_container">
+                    <div id="youwin_sprite"></div>
+                </div>
+
+                <div id="homebuttonws_container">
+                    <div id="homebuttonws_sprite"></div>
+                </div>
+
+                <div id="playagain_container">
+                    <div id="playagain_sprite"></div>
+                </div>
+                
+                <audio id="levelcompleteMusic" src="audio/level-complete-music.m4a"></audio>
+                
+            </div>
+        </section>
+        <aside>
+            <h1>Save the Dead</h1>
+            <p>"Save the Dead" is a game based on the Mexican tradition "The Day of the Dead". In this game, you have to click on the right items to decorate the altars without clicking on the dogs nor the dead because that will take away points and lives correspondingly.</p>
+            <p id="pinfo">This game was created by Ana Sofia Castellanos as part of the course 'Basic Animation' at Copenhagen School of Design and Technology.
+            </p>
+        </aside>
+    </main>
+
+
+    <footer>
+        <nav id="footernav">
+            <ul>
+                <li><a href="FB">Facebook</a></li>
+                <li><a href="IN">Instagram</a></li>
+            </ul>
+
+        </nav>
+        
+        <p id="soundinfo">
+            Copyright by Ana Sofia Castellanos <br>Sound from Zapsplat.com
+        </p>
+
+
+    </footer>
+    <script src="js/save-the-death.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    grid-template-areas:
+        "hd"
+        "ma"
+        "fo";
+    background-color: #8d3b8d;
+}
+
+header {
+    grid-area: hd;
+    background-color: orange;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 2vw;
+}
+
+li {
+    padding: 3vw;
+}
+
+nav a {
+    text-decoration: none
+}
+
+li a:link {
+    color: black;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: black;
+    text-decoration: none
+}
+
+li a:hover {
+    color: mediumvioletred;
+    text-decoration: none
+}
+
+li a:active {
+    color: green;
+    text-decoration: none
+}
+
+
+
+main {
+        grid-area: ma;
+        font-family: 'Poppins', sans-serif;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        text-align: left;
+        font-size: 2vw;
+    color: white;
+    }
+
+h1 {
+    text-align: center;
+}
+
+
+
+
+ footer {
+        grid-area: fo;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 1vw;
+        padding: 1vw;
+    }
